@@ -2,14 +2,17 @@
   <router-view />
 </template>
 
-<style lang="less">
-// #app {
-//   margin: 0;
-//   padding: 0;
-// }
+<style>
 html,
-body {
+body,
+#app {
   margin: 0;
   padding: 0;
+  height: 100vh;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>

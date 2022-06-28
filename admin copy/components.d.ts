@@ -4,20 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ABreadcrumb: typeof import('ant-design-vue/es')['Breadcrumb']
-    ABreadcrumbItem: typeof import('ant-design-vue/es')['BreadcrumbItem']
-    ALayout: typeof import('ant-design-vue/es')['Layout']
-    ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
-    ALayoutFooter: typeof import('ant-design-vue/es')['LayoutFooter']
-    ALayoutHeader: typeof import('ant-design-vue/es')['LayoutHeader']
-    ALayoutSider: typeof import('ant-design-vue/es')['LayoutSider']
-    AMenu: typeof import('ant-design-vue/es')['Menu']
-    AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
-    ASubMenu: typeof import('ant-design-vue/es')['SubMenu']
     ElAside: typeof import('element-plus/es')['ElAside']
-    ElAvatar: typeof import('element-plus/es')['ElAvatar']
-    ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
-    ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElCol: typeof import('element-plus/es')['ElCol']
@@ -45,7 +32,6 @@ declare module 'vue' {
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElUpload: typeof import('element-plus/es')['ElUpload']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
   }
 }
 

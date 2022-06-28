@@ -6,8 +6,8 @@ import {
 } from 'vue-router';
 import Login from '../views/Login.vue';
 import Main from '../views/Main.vue';
-const CategoryEdit = () => import('../views/CategoryEdit.vue');
-const CategoryList = () => import('../views/CategoryList.vue');
+import CategoryEdit from '../views/CategoryEdit.vue';
+import CategoryList from '../views/CategoryList.vue';
 import ItemEdit from '../views/ItemEdit.vue';
 import ItemList from '../views/ItemList.vue';
 import HeroEdit from '../views/HeroEdit.vue';
@@ -114,15 +114,16 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
+  // history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (!to.meta.isPublic && !localStorage.token) {
-//     return next('/login');
-//   }
-//   next();
-// });
+router.beforeEach((to, from, next) => {
+  if (!to.meta.isPublic && !localStorage.token) {
+    return next('/login');
+  }
+  next();
+});
 
 export default router;

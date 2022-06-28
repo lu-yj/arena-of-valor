@@ -25,7 +25,7 @@
 import { ref, onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
 import { ElMessageBox, ElMessage } from 'element-plus';
-import http from '@/http';
+import http from '../http'
 
 const router = useRouter();
 const items = ref([]);

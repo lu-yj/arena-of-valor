@@ -1,0 +1,14 @@
+{
+  "name": "arena-of-valor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:admin": "pnpm -F admin dev",
+    "run:server": "pnpm -F server start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

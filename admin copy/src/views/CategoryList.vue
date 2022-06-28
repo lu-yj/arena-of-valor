@@ -63,3 +63,6 @@ onBeforeMount(() => {
   fetch();
 });
 </script>
+
+<style scoped>
+</style>

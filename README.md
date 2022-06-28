@@ -1,5 +1,107 @@
 # 王者荣耀全栈项目
 
+
+
+
+
+# 准备
+
+
+
+## Monorepo
+
+根目录下新建 `pnpm-workspace.yaml` 文件
+
+```yaml
+packages: 
+    - "web/**"
+    - "admin/**"
+    - "server/**"
+```
+
+安装全局开发依赖
+
+```sh
+pnpm add typescript -w -D
+```
+
+
+### 参考
+
+1. [基于pnpm从0搭建Monorepo工程 - 掘金](https://juejin.cn/post/7104545520625909774)
+2. [pnpm + workspace + changesets 构建你的 monorepo 工程 - 掘金](https://juejin.cn/post/7098609682519949325)
+
+
+
+## Element Plus
+
+安装 Element Plus
+
+```sh
+pnpm add element-plus -F admin
+pnpm add unplugin-vue-components unplugin-auto-import -F admin -D
+```
+
+在 `/admin/vite.config.ts` 文件中配置按需引入
+
+```typescript
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+  ]
+});
+```
+
+
+
+
+
+```sh
+pnpm add vue-router@4 ant-design-vue unplugin-vue-components axios @vueup/vue-quill -F admin
+pnpm add vue-router@4 axios -F mobile
+```
+
+
+### 
+
+
+
+## 服务端
+
+创建 `/server` 文件夹并初始化
+
+```js
+pnpm init
+```
+
+安装相关依赖：
+
+```sh
+pnpm add express mongoose cors -F server
+```
+
+
+
+
+
+### 数据库
+
+[视频安装流程](https://www.bilibili.com/video/BV1wr4y1e7rw)
+
+
+
 ## 技术栈
 
 ```
